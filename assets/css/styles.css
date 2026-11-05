@@ -1,0 +1,523 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap");
+
+/* Brand colors */
+:root {
+  --primary: #6c8ebf;
+  --primary-dark: #4f6f9b;
+  --primary-soft: #eaf0f8;
+
+  --secondary: #f2b880;
+
+  --bg: #f7f9fb;
+  --surface: #ffffff;
+
+  --text: #334155;
+  --text-soft: #64748b;
+  --border: #e2e8f0;
+
+  /* Bootstrap color mapping */
+  --bs-primary: var(--primary);
+  --bs-primary-rgb: 108, 142, 191;
+
+  --bs-secondary: var(--secondary);
+  --bs-secondary-rgb: 242, 184, 128;
+
+/* Category backgrounds */
+--category-tech: #EAF0F8;
+--category-culture: #FCE8D5;
+--category-sports: #E2F0E7;
+--category-social: #EEE8F7;
+
+/* Category accent colors */
+--category-tech-accent: #4F6F9B;
+--category-culture-accent: #A45D36;
+--category-sports-accent: #477A59;
+--category-social-accent: #715A91;
+}
+
+.text-soft {
+  color: var(--text-soft);
+}
+
+/* Category background classes */
+.bg-category-tech {
+  background-color: var(--category-tech) !important;
+  border: 1px solid var(--category-tech-accent) !important;
+  color: var(--category-tech-accent) !important;
+}
+
+.bg-category-culture {
+  background-color: var(--category-culture) !important;
+  border: 1px solid var(--category-culture-accent) !important;
+  color: var(--category-culture-accent) !important;
+}
+
+.bg-category-sport {
+  background-color: var(--category-sports) !important;
+  border: 1px solid var(--category-sports-accent) !important;
+  color: var(--category-sports-accent) !important;
+}
+
+.bg-category-social {
+  background-color: var(--category-social) !important;
+  border: 1px solid var(--category-social-accent) !important;
+  color: var(--category-social-accent) !important;
+}
+
+/* Solid category buttons */
+
+.btn-category-tech {
+  background-color: var(--category-tech-accent);
+  border-color: var(--category-tech-accent);
+  color: #fff;
+}
+
+.btn-category-culture {
+  background-color: var(--category-culture-accent);
+  border-color: var(--category-culture-accent);
+  color: #fff;
+}
+
+.btn-category-sport {
+  background-color: var(--category-sports-accent);
+  border-color: var(--category-sports-accent);
+  color: #fff;
+}
+
+.btn-category-social {
+  background-color: var(--category-social-accent);
+  border-color: var(--category-social-accent);
+  color: #fff;
+}
+
+* {
+  font-family: "Cairo", sans-serif;
+}
+
+/* Typography */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Theme Toggle Switch */
+
+.theme-switch {
+  width: 58px;
+  height: 28px;
+  display: block;
+  position: relative;
+  background-color: #0d6efd;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.theme-thumb {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 22px;
+  height: 22px;
+  background-color: white;
+  color: #0d6efd;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.theme-thumb i {
+  font-size: 13px;
+}
+
+.moon-icon {
+  display: none;
+}
+
+.theme-toggle input {
+  opacity: 0;
+  position: absolute;
+}
+
+.theme-toggle input:checked + .theme-switch .theme-thumb {
+  transform: translateX(-30px);
+}
+
+.theme-toggle input:checked + .theme-switch .sun-icon {
+  display: none;
+}
+
+.theme-toggle input:checked + .theme-switch .moon-icon {
+  display: inline;
+}
+
+/* Navbar Start */
+
+/* Custom Menu Icon Start */
+.navbar-multaqa .navbar-toggler {
+  width: 44px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background-color: var(--bg);
+  box-shadow: none;
+}
+
+.multaqa-menu-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  width: 22px;
+}
+
+.multaqa-menu-icon span {
+  display: block;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--text);
+}
+
+.multaqa-menu-icon span:first-child {
+  width: 22px;
+}
+
+.multaqa-menu-icon span:last-child {
+  width: 14px;
+}
+/* Custom Menu Icon End */
+
+.navbar-multaqa {
+  background-color: var(--surface);
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+}
+
+.navbar-brand .brand-symbol {
+  background-color: var(--primary-dark);
+  border-radius: 10px;
+  padding: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-multaqa .nav-link {
+  color: var(--text-soft);
+  transition:
+    color 0.15s ease,
+    background 0.15s ease;
+  border-radius: 0.5rem;
+}
+
+.navbar-multaqa .nav-link:hover {
+  color: var(--primary-dark);
+  background-color: var(--bg);
+}
+
+/* Active: current page */
+.navbar-multaqa .nav-link.active {
+  color: var(--primary-dark);
+  background-color: var(--primary-soft);
+  font-weight: 700;
+}
+
+/* Navbar End */
+
+/* Responsive Navbar Start */
+@media (max-width: 992px) {
+  .navbar-multaqa .navbar-collapse {
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    background-color: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+  }
+
+  .navbar-multaqa .navbar-toggler {
+    display: grid;
+    place-items: center;
+  }
+
+  .navbar-multaqa .navbar-nav {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-multaqa .nav-link {
+    padding: 0.65rem 1rem;
+    text-align: center;
+  }
+
+  .navbar-multaqa .navbar-collapse > .btn {
+    display: block;
+    width: auto;
+    margin: 0.75rem auto 0 !important;
+  }
+}
+/* Responsive Navbar End */
+
+/* Featured Section Start */
+#featured-events #featured-track {
+  transition: transform 1s ease-out;
+}
+/* Featured Section End */
+
+/* Categories Section Start */
+#categories .row div {
+  transition: transform 0.15s ease-out;
+}
+#categories .row div:hover {
+  transform: translateY(-5px);
+}
+/* Categories Section End */
+
+/* Latest Events Section Start */
+#latest-events .ratio {
+  overflow: hidden;
+}
+
+#latest-events article img {
+  transition: transform 0.15s ease-in;
+}
+
+#latest-events article img:hover {
+  transform: scale(1.2) rotateZ(-1deg);
+  cursor: zoom-in;
+}
+
+/* Button Hover State */
+
+.btn {
+  transition: filter 0.15s ease;
+}
+
+.btn:hover {
+  filter: brightness(0.9)
+}
+
+/* Tech button */
+.btn.btn-category-tech:hover {
+  background-color: var(--category-tech-accent);
+  border-color: var(--category-tech-accent);
+  color: #fff;
+  filter: brightness(0.9);
+}
+
+/* Culture button */
+.btn.btn-category-culture:hover {
+  background-color: var(--category-culture-accent);
+  border-color: var(--category-culture-accent);
+  color: #fff;
+  filter: brightness(0.9);
+}
+
+/* Sport button */
+.btn.btn-category-sport:hover {
+  background-color: var(--category-sports-accent);
+  border-color: var(--category-sports-accent);
+  color: #fff;
+  filter: brightness(0.9);
+}
+
+/* Social button */
+.btn.btn-category-social:hover {
+  background-color: var(--category-social-accent);
+  border-color: var(--category-social-accent);
+  color: #fff;
+  filter: brightness(0.9);
+}
+
+/* Latest Events Section End */
+
+/* All Events Section Start */
+.ratio {
+  overflow: hidden;
+}
+
+article img {
+  transition: transform 0.15s ease-in;
+}
+
+article img:hover {
+  transform: scale(1.2) rotateZ(-1deg);
+  cursor: zoom-in;
+}
+/* All Events Section End */
+
+/* Dark Theme Colors */
+[data-theme="dark"] {
+  /* Brand colors */
+  --primary: #8eadd8;
+  --primary-dark: #a9c4e5;
+  --primary-soft: #293b54;
+
+  --secondary: #e5ae78;
+
+  /* Main colors */
+  --bg: #121a27;
+  --surface: #1c293b;
+
+  --text: #e8edf5;
+  --text-soft: #b7c3d3;
+  --border: #35445a;
+
+  /* Bootstrap color mapping */
+  --bs-primary: var(--primary);
+  --bs-primary-rgb: 142, 173, 216;
+
+  --bs-secondary: var(--secondary);
+  --bs-secondary-rgb: 229, 174, 120;
+
+  /* Category backgrounds */
+  --category-tech: #263a53;
+  --category-culture: #493526;
+  --category-sports: #263e32;
+  --category-social: #3b304d;
+
+  /* Category accent colors */
+  --category-tech-accent: #a9c5e8;
+  --category-culture-accent: #f0b88e;
+  --category-sports-accent: #a4cfae;
+  --category-social-accent: #c4b0e3;
+}
+
+/* Dark Theme Bootstrap Adjustments */
+
+[data-theme="dark"] .bg-light,
+[data-theme="dark"] .bg-white {
+  background-color: var(--surface) !important;
+  color: var(--text);
+}
+
+[data-theme="dark"] .card {
+  background-color: var(--surface);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .text-body-secondary {
+  color: var(--text-soft) !important;
+}
+
+[data-theme="dark"] .text-body {
+  color: var(--text) !important;
+}
+
+[data-theme="dark"] .border,
+[data-theme="dark"] .border-top {
+  border-color: var(--border) !important;
+}
+
+/* Form Controls */
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select {
+  background-color: var(--surface);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .form-control::placeholder {
+  color: var(--text-soft);
+}
+
+/* Dark Mode Buttons */
+
+/* Primary Buttons */
+[data-theme="dark"] .btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #4f6f9b;
+  --bs-btn-border-color: #4f6f9b;
+
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #405e87;
+  --bs-btn-hover-border-color: #405e87;
+}
+
+/* Category Buttons */
+[data-theme="dark"] .btn-category-tech {
+  background-color: #4f6f9b;
+  border-color: #4f6f9b;
+  color: #fff;
+}
+
+[data-theme="dark"] .btn-category-culture {
+  background-color: #8b5435;
+  border-color: #8b5435;
+  color: #fff;
+}
+
+[data-theme="dark"] .btn-category-sport {
+  background-color: #416e50;
+  border-color: #416e50;
+  color: #fff;
+}
+
+[data-theme="dark"] .btn-category-social {
+  background-color: #665080;
+  border-color: #665080;
+  color: #fff;
+}
+
+/* Outline Buttons */
+[data-theme="dark"] .btn-outline-primary {
+  --bs-btn-color: #b9d0ed;
+  --bs-btn-border-color: #7898c2;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #4f6f9b;
+  --bs-btn-hover-border-color: #4f6f9b;
+}
+
+/* Dark Mode - Logo */
+[data-theme="dark"] .navbar-brand .brand-symbol {
+  background-color: #4f6f9b;
+}
+
+/* Scroll To Top Button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+
+  width: 46px;
+  height: 46px;
+
+  display: grid;
+  place-items: center;
+
+  background-color: var(--primary-dark);
+  color: #fff;
+
+  border: none;
+  border-radius: 12px;
+
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1030;
+
+  box-shadow: 0 3px 10px #0002;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  transition: all 0.3s ease;
+}
+
+/* Show Button */
+.scroll-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Hover */
+.scroll-top-btn:hover {
+  filter: brightness(0.9);
+}
+
+/* Dark Mode */
+[data-theme="dark"] .scroll-top-btn {
+  background-color: #4f6f9b;
+}

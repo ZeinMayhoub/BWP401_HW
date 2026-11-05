@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مُلتَقى | دليل فعاليات الجامعة الافتراضية</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/imgs/favicon.svg"
+      type="image/svg"
+    />
+
+    <!-- Bootstrap CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css"
+      integrity="sha384-CfCrinSRH2IR6a4e6fy2q6ioOX7O6Mtm1L9vRvFZ1trBncWmMePhzvafv7oIcWiW"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css"
+    />
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <!-- Start Header -->
+    <header class="p-3">
+      <nav class="navbar navbar-expand-lg navbar-multaqa rounded-4 shadow-sm">
+        <div class="container-fluid">
+          <!-- Brand -->
+          <a
+            class="navbar-brand d-flex align-items-center gap-2"
+            href="index.html"
+          >
+            <span class="brand-symbol">
+              <img src="./assets/imgs/heart-handshake.svg" alt="" />
+            </span>
+            <span>
+              <strong class="d-block">ملتقى</strong>
+              <small class="brand-description d-block">
+                دليل فعاليات الجامعة الافتراضية
+              </small>
+            </span>
+          </a>
+          <!-- Mobile toggle -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="فتح قائمة التنقل"
+          >
+            <span class="multaqa-menu-icon" aria-hidden="true">
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+          <!-- Navigation -->
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="mainNavbar"
+          >
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ms-lg-3 gap-lg-2">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >الرئيسية</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="events.html">الفعاليات</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">حول الدليل</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">تواصل معنا</a>
+              </li>
+              <li
+                class="nav-item d-flex justify-content-center align-items-center"
+              >
+                <div class="theme-toggle">
+                  <input type="checkbox" id="theme-toggle" />
+                  <label for="theme-toggle" class="theme-switch">
+                    <span class="theme-thumb">
+                      <i class="bi bi-sun-fill sun-icon"></i>
+                      <i class="bi bi-moon-fill moon-icon"></i>
+                    </span>
+                  </label>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- End Header -->
+    <!-- ٍStart Main -->
+    <main>
+      <!-- Featured Section -->
+      <section
+        id="featured-events"
+        class="container py-5"
+        aria-labelledby="featured-heading"
+      >
+        <div class="mb-4">
+          <p
+            class="d-flex align-items-center gap-2 text-primary fw-semibold mb-2"
+          >
+            <i class="bi bi-calendar-event" aria-hidden="true"></i>
+            <span>اكتشف الجديد في جامعتك</span>
+          </p>
+          <h2 id="featured-heading" class="h3 mb-0">
+            فعاليات بارزة هذا الأسبوع
+          </h2>
+        </div>
+        <!-- Slider Viewport: The Visible Area -->
+        <div
+          id="featured-viewport"
+          class="overflow-hidden rounded-4 border shadow-sm"
+        >
+          <!-- Slider Track -->
+          <div id="featured-track" class="d-flex" dir="ltr">
+            <!-- First Slide -->
+            <article
+              class="featured-slide flex-shrink-0 w-100 bg-white p-3 p-lg-4"
+              dir="rtl"
+            >
+              <div class="row align-items-center g-4">
+                <!-- Event Information -->
+                <div class="col-12 col-lg-6">
+                  <span class="badge rounded-pill bg-primary text-white">
+                    تقنية
+                  </span>
+                  <h3 class="h4 m-3">
+                    المؤتمر السنوي للذكاء الاصطناعي وتطبيقاته
+                  </h3>
+                  <p class="text-body-secondary">
+                    استعراض لأبرز مشاريع تخرج الطلاب في مجالات التعلم العميق
+                    وتحليل البيانات الكبيرة بحضور خبراء القطاع.
+                  </p>
+                  <p class="mb-2">
+                    <strong>التاريخ:</strong>
+                    15 نوفمبر 2026
+                  </p>
+                  <p class="mb-3">
+                    <strong>الموعد:</strong>
+                    الساعة 10:00 صباحاً — الساعة 3:00 عصراً
+                  </p>
+                  <p class="text-body-secondary mb-4">
+                    <strong>المكان:</strong>
+                    كلية الهندسة الكهربائية، جامعة حلب
+                  </p>
+
+                  <a
+                    href="event.html?id=ai-conference"
+                    class="btn btn-category-tech text-white border-0"
+                  >
+                    تفاصيل الفعالية
+                  </a>
+                </div>
+                <!-- Event Image Placeholder -->
+                <div class="col-12 col-lg-6">
+                  <div
+                    class="ratio ratio-16x9 bg-light rounded-4 overflow-hidden"
+                  >
+                    <div
+                      class="d-flex-align-items-center justify-content-center text-body-secondary"
+                    >
+                      <img
+                        src="./assets/imgs/فعالية1/event1-promo.jpg"
+                        alt="المؤتمر السنوي للذكاء الاصطناعي وتطبيقاته"
+                        class="w-100 h-100 object-fit-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <!-- Second Slide -->
+            <article
+              class="featured-slide flex-shrink-0 w-100 bg-white p-3 p-lg-4"
+              dir="rtl"
+            >
+              <div class="row align-items-center g-4">
+                <!-- Event Information -->
+                <div class="col-12 col-lg-6">
+                  <span class="badge rounded-pill bg-secondary text-dark">
+                    ثقافة
+                  </span>
+                  <h3 class="h4 m-3">
+                    أمسية شعرية وتوقيع ديوان "برمجيات الروح"
+                  </h3>
+                  <p class="text-body-secondary">
+                    لقاء أدبي يجمع المواهب الشعرية من طلاب الجامعة لقراءة أحدث
+                    نصوصهم الأدبية وتوقيع إصداراتهم الأولى.
+                  </p>
+                  <p class="mb-2">
+                    <strong>التاريخ:</strong>
+                    25 نوفمبر 2026
+                  </p>
+                  <p class="mb-3">
+                    <strong>الموعد:</strong>
+                    الساعة 4:00 عصراً — الساعة 7:00 مساءً
+                  </p>
+                  <p class="text-body-secondary mb-4">
+                    <strong>المكان:</strong>
+                    المركز الثقافي العربي – مدينة درعا
+                  </p>
+                  <a
+                    href="event.html?poetry-evening"
+                    class="btn btn-category-culture text-white border-0"
+                  >
+                    تفاصيل الفعالية
+                  </a>
+                </div>
+                <!-- Event Image Placeholder -->
+                <div class="col-12 col-lg-6">
+                  <div
+                    class="ratio ratio-16x9 bg-light rounded-4 overflow-hidden"
+                  >
+                    <div
+                      class="d-flex-align-items-center justify-content-center text-body-secondary"
+                    >
+                      <img
+                        src="./assets/imgs/فعالية3/event3-promo.jpg"
+                        alt="أمسية شعرية وتوقيع ديوان برمجيات الروح"
+                        class="w-100 h-100 object-fit-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <!-- Slider Controls -->
+        <div class="d-flex justify-content-center gap-3 mt-3">
+          <button
+            id="featured-next"
+            class="btn btn-outline-primary"
+            type="button"
+            aria-label="الشريحة التالية"
+          >
+            <i class="bi bi-chevron-right"></i>
+          </button>
+          <button
+            id="featured-prev"
+            class="btn btn-outline-primary"
+            type="button"
+            aria-label="الشريحة السابقة"
+          >
+            <i class="bi bi-chevron-left"></i>
+          </button>
+        </div>
+      </section>
+      <!-- Categories Section -->
+      <section
+        id="categories"
+        class="container py-5"
+        aria-labelledby="categories-heading"
+      >
+        <!-- Section Header -->
+        <div class="mb-4">
+          <h2 id="categories-heading" class="h3">اكتشف حسب اهتمامك</h2>
+          <p class="text-body-secondary">اختر التصنيف الذي يناسب اهتمامك</p>
+        </div>
+        <!-- Section Body -->
+        <div class="row g-3">
+          <!-- Technology Category -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <a
+              href="events.html?category=tech"
+              class="d-flex flex-column align-items-center justify-content-center p-4 g-3 bg-category-tech rounded-4 shadow-sm text-decoration-none h-100"
+            >
+              <i class="bi bi-cpu fs-1"></i>
+              <span class="fw-semibold"> تقني </span>
+            </a>
+          </div>
+          <!-- Culture Category -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <a
+              href="events.html?category=culture"
+              class="d-flex flex-column align-items-center justify-content-center p-4 g-3 bg-category-culture rounded-4 shadow-sm text-decoration-none h-100"
+            >
+              <i class="bi bi-palette fs-1"></i>
+
+              <span class="fw-semibold"> ثقافي </span>
+            </a>
+          </div>
+          <!-- Sport Category -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <a
+              href="events.html?category=sport"
+              class="d-flex flex-column align-items-center justify-content-center p-4 g-3 bg-category-sport rounded-4 shadow-sm text-decoration-none h-100"
+            >
+              <i class="bi bi-trophy fs-1"></i>
+
+              <span class="fw-semibold"> رياضة </span>
+            </a>
+          </div>
+          <!-- Social Category -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <a
+              href="events.html?category=social"
+              class="d-flex flex-column align-items-center justify-content-center p-4 g-3 bg-category-social rounded-4 shadow-sm text-decoration-none h-100"
+            >
+              <i class="bi bi-people fs-1"></i>
+
+              <span class="fw-semibold"> اجتماعي </span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Latest Events Section -->
+      <section
+        id="latest-events"
+        class="container py-5"
+        aria-labelledby="latest-heading"
+      >
+        <!-- Section Header -->
+        <div
+          class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4"
+        >
+          <h2 id="latest-heading" class="h3 mb-0">أحدث الفعاليات</h2>
+
+          <a
+            href="events.html"
+            class="link-primary text-decoration-none fw-semibold"
+          >
+            عرض جميع الفعاليات
+            <i class="bi bi-arrow-left" aria-hidden="true"></i>
+          </a>
+        </div>
+        <!-- Section Body -->
+        <div class="row g-4">
+          <!-- 1. Web Workshop -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card rounded-4 h-100 overflow-hidden shadow-sm">
+              <!-- Event Image -->
+              <div class="ratio ratio-16x9">
+                <img
+                  src="./assets/imgs/فعالية2/event2-promo.jpg"
+                  alt="أشخاص يعملون معاً في بيئة عمل تقنية"
+                  class="w-100 h-100 object-fit-cover"
+                />
+              </div>
+
+              <div class="card-body d-flex flex-column">
+                <!-- Category -->
+                <span
+                  class="badge rounded-pill bg-category-tech align-self-start mb-3"
+                >
+                  تقني
+                </span>
+                <!-- Date and Location -->
+                <div
+                  class="small text-body-secondary d-flex flex-column gap-1 mb-3"
+                >
+                  <p class="d-flex align-items-center gap-2 mb-0">
+                    <i class="bi bi-calendar-event" aria-hidden="true"></i>
+                    22 نوفمبر 2026
+                  </p>
+                  <p class="d-flex align-items-center gap-2 mb-0">
+                    <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                    كلية المعلوماتية – جامعة اللاذقية
+                  </p>
+                </div>
+                <!-- Title -->
+                <h3 class="card-title h5 mt-0">
+                  ورشة عمل أساسيات تطوير تطبيقات الويب
+                </h3>
+                <!-- Description -->
+                <p class="card-text text-body-secondary">
+                  دورة عملية مكثفة لتعلم أساسيات بناء وتصميم المواقع الإلكترونية
+                  باستخدام HTML5 و CSS3 و JavaScript.
+                </p>
+                <!-- Details Button -->
+                <a
+                  href="event.html?id=web-workshop"
+                  class="btn btn-category-tech border-0 mt-auto"
+                >
+                  تفاصيل الفعالية
+                </a>
+              </div>
+            </article>
+          </div>
+          <!-- 2. Book Fair -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card rounded-4 h-100 overflow-hidden shadow-sm">
+              <!-- Event Image -->
+              <div class="ratio ratio-16x9">
+                <img
+                  src="./assets/imgs/فعالية4/event4-promo.jpg"
+                  alt="معرض كتب"
+                  class="w-100 h-100 object-fit-cover"
+                />
+              </div>
+              <div class="card-body d-flex flex-column">
+                <!-- Category -->
+                <span
+                  class="badge rounded-pill bg-category-culture align-self-start mb-3"
+                >
+                  ثقافة
+                </span>
+                <!-- Date and Location -->
+                <div
+                  class="small text-body-secondary d-flex flex-column gap-1 mb-3"
+                >
+                  <p class="d-flex align-items-center gap-2 mb-0">
+                    <i class="bi bi-calendar-event" aria-hidden="true"></i>
+                    1 ديسمبر - 5 ديسمبر 2026
+                  </p>
+                  <p class="d-flex align-items-center gap-2 mb-0">
+                    <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                    المركز الثقافي العربي القديم – طرطوس
+                  </p>
+                </div>
+                <!-- Title -->
+                <h3 class="card-title h5 mt-0 lh-base">
+                  معرض الكتاب الجامعي السنوي
+                </h3>
+                <!-- Description -->
+                <p class="card-text text-body-secondary lh-base">
+                  معرض شامل يضم مئات العناوين في العلوم، الأدب، والتكنولوجيا
+                  بتخفيضات خاصّة للطلاب.
+                </p>
+                <!-- Details Button -->
+                <a
+                  href="event.html?id=book-fair"
+                  class="btn btn-category-culture border-0 mt-auto"
+                >
+                  تفاصيل الفعالية
+                </a>
+              </div>
+            </article>
+          </div>
+          <!-- 3. Basketball-3x3 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card rounded-4 h-100 overflow-hidden shadow-sm">
+              <!-- Event Image -->
+              <div class="ratio ratio-16x9">
+                <img
+                  src="./assets/imgs/فعالية6/event6-promo.jpg"
+                  alt="كرة سلة تدخل الشبكة"
+                  class="w-100 h-100 object-fit-cover"
+                />
+              </div>
+              <div class="card-body d-flex flex-column">
+                <!-- Category -->
+                <span
+                  class="badge rounded-pill bg-category-sport align-self-start mb-3"
+                >
+                  رياضة
+                </span>
+                <!-- Date and Location -->
+                <div
+                  class="small text-body-secondary d-flex flex-column gap-1 mb-3"
+                >
+                  <p class="d-flex align-items-center gap-2 mb-0">
+                    <i class="bi bi-calendar-event" aria-hidden="true"></i>
+                    28 نوفمبر 2026
+                  </p>
+                  <p class="d-flex align-items-center gap-2 mb-0">
+                    <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                    مجمع الحمدانية الرياضي
+                  </p>
+                </div>
+                <!-- Title -->
+                <h3 class="card-title h5 mt-0 lh-base">
+                  دوري كرة السلة الثلاثي (3x3)
+                </h3>
+                <!-- Description -->
+                <p class="card-text text-body-secondary lh-base">
+                  منافسات حماسية لفرق كرة السلة الثلاثية بين مختلف كليات الجامعة
+                  وسط أجواء تنافسية مشجعة.
+                </p>
+                <!-- Details Button -->
+                <a
+                  href="event.html?id=basketball-3x3"
+                  class="btn btn-category-sport border-0 mt-auto"
+                >
+                  تفاصيل الفعالية
+                </a>
+              </div>
+            </article>
+          </div>
+          <!-- 4. Volunteer Day -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card rounded-4 h-100 overflow-hidden shadow-sm">
+              <!-- Event Image -->
+              <div class="ratio ratio-16x9">
+                <img
+                  src="./assets/imgs/فعالية7/event7-promo.jpg"
+                  alt="فريق عمل تطوعي"
+                  class="w-100 h-100 object-fit-cover"
+                />
+              </div>
+              <div class="card-body d-flex flex-column">
+                <!-- Category -->
+                <span
+                  class="badge rounded-pill bg-category-social align-self-start mb-3"
+                >
+                  اجتماعي
+                </span>
+                <!-- Date and Location -->
+                <div
+                  class="small text-body-secondary d-flex flex-column gap-1 mb-3"
+                >
+                  <p class="d-flex align-items-center gap-2 mb-0">
+                    <i class="bi bi-calendar-event" aria-hidden="true"></i>
+                    5 ديسمبر 2026
+                  </p>
+                  <p class="d-flex align-items-center gap-2 mb-0">
+                    <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                    حديقة الثورة – مدينة حماة
+                  </p>
+                </div>
+                <!-- Title -->
+                <h3 class="card-title h5 mt-0 lh-base">
+                  يوم العمل التطوعي الجامعي "نعمل لنرتقي"
+                </h3>
+                <!-- Description -->
+                <p class="card-text text-body-secondary lh-base">
+                  حملة تطوعية طلابية تهدف لخدمة المجتمع المحلي، تشمل تشجير
+                  الحدائق وتنظيم ورش توعوية.
+                </p>
+                <!-- Details Button -->
+                <a
+                  href="event.html?id=volunteer-day"
+                  class="btn btn-category-social border-0 mt-auto"
+                >
+                  تفاصيل الفعالية
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team Section -->
+      <section id="team" class="py-5">
+        <div class="container">
+          <!-- Section Heading -->
+          <div class="text-center mb-4">
+            <h2 class="fw-bold">فريق العمل</h2>
+            <p class="text-soft">فريق مُلتقى، خمسـة أعضاء جمعهم هدف واحد.</p>
+          </div>
+
+          <!-- Team Members -->
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+            <!-- Member 1 -->
+            <div class="col">
+              <div class="card border-0 shadow-sm rounded-4 p-3 h-100">
+                <div class="d-flex align-items-center gap-3">
+                  <div
+                    class="rounded-circle bg-primary-subtle text-primary d-flex align-items-center justify-content-center flex-shrink-0"
+                    style="width: 48px; height: 48px"
+                  >
+                    <i class="bi bi-person-fill fs-4"></i>
+                  </div>
+                  <div>
+                    <h3 class="h6 fw-bold mb-1">ندى اللو</h3>
+                    <small class="text-soft" dir="ltr">nada_228070</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Member 2 -->
+            <div class="col">
+              <div class="card border-0 shadow-sm rounded-4 p-3 h-100">
+                <div class="d-flex align-items-center gap-3">
+                  <div
+                    class="rounded-circle bg-primary-subtle text-primary d-flex align-items-center justify-content-center flex-shrink-0"
+                    style="width: 48px; height: 48px"
+                  >
+                    <i class="bi bi-person-fill fs-4"></i>
+                  </div>
+                  <div>
+                    <h3 class="h6 fw-bold mb-1">عيسى سليمان</h3>
+                    <small class="text-soft" dir="ltr">issa_289147</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Member 3 -->
+            <div class="col">
+              <div class="card border-0 shadow-sm rounded-4 p-3 h-100">
+                <div class="d-flex align-items-center gap-3">
+                  <div
+                    class="rounded-circle bg-primary-subtle text-primary d-flex align-items-center justify-content-center flex-shrink-0"
+                    style="width: 48px; height: 48px"
+                  >
+                    <i class="bi bi-person-fill fs-4"></i>
+                  </div>
+                  <div>
+                    <h3 class="h6 fw-bold mb-1">نور أبو شقرة</h3>
+                    <small class="text-soft" dir="ltr">Noor_414600</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Member 4 -->
+            <div class="col">
+              <div class="card border-0 shadow-sm rounded-4 p-3 h-100">
+                <div class="d-flex align-items-center gap-3">
+                  <div
+                    class="rounded-circle bg-primary-subtle text-primary d-flex align-items-center justify-content-center flex-shrink-0"
+                    style="width: 48px; height: 48px"
+                  >
+                    <i class="bi bi-person-fill fs-4"></i>
+                  </div>
+                  <div>
+                    <h3 class="h6 fw-bold mb-1">هادي الغفير</h3>
+                    <small class="text-soft" dir="ltr">Hadi_363664</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Member 5 -->
+            <div class="col">
+              <div class="card border-0 shadow-sm rounded-4 p-3 h-100">
+                <div class="d-flex align-items-center gap-3">
+                  <div
+                    class="rounded-circle bg-primary-subtle text-primary d-flex align-items-center justify-content-center flex-shrink-0"
+                    style="width: 48px; height: 48px"
+                  >
+                    <i class="bi bi-person-fill fs-4"></i>
+                  </div>
+                  <div>
+                    <h3 class="h6 fw-bold mb-1">زين ميهوب</h3>
+                    <small class="text-soft" dir="ltr">zein_356585</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- End Main -->
+    <!-- Start Footer -->
+    <footer class="bg-light border-top mt-5">
+      <div class="container py-4 py-lg-5">
+        <div class="row g-4">
+          <!-- Brand information -->
+          <div class="col-12 col-md-5">
+            <a
+              href="index.html"
+              class="navbar-brand d-inline-flex align-items-center gap-2 mb-3 text-decoration-none"
+            >
+              <span class="brand-symbol">
+                <img
+                  src="./assets/imgs/heart-handshake.svg"
+                  alt=""
+                  width="26"
+                  height="26"
+                />
+              </span>
+              <span>
+                <strong class="d-block text-body">ملتقى</strong>
+                <small class="d-block text-body-secondary">
+                  دليل فعاليات الجامعة الافتراضية
+                </small>
+              </span>
+            </a>
+            <p class="text-body-secondary mb-0">
+              اكتشف الفعاليات والأنشطة الجامعية، وتعرّف على الفرص التي تهمك في
+              مكان واحد.
+            </p>
+          </div>
+          <!-- Quick links -->
+          <div class="col-6 col-md-3">
+            <h2 class="h6 mb-3">روابط سريعة</h2>
+            <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+              <li>
+                <a
+                  href="index.html"
+                  class="link-body-emphasis text-decoration-none"
+                >
+                  الرئيسية
+                </a>
+              </li>
+              <li>
+                <a
+                  href="events.html"
+                  class="link-body-emphasis text-decoration-none"
+                >
+                  جميع الفعاليات
+                </a>
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="link-body-emphasis text-decoration-none"
+                >
+                  حول الدليل
+                </a>
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="link-body-emphasis text-decoration-none"
+                >
+                  تواصل معنا
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Contact and social links -->
+          <div class="col-6 col-md-4">
+            <h2 class="h6 mb-3">التواصل</h2>
+            <p class="text-body-secondary">
+              للاستفسارات، تواصل معنا عبر نموذج الاتصال.
+            </p>
+            <a href="contact.html" class="link-primary text-decoration-none">
+              انتقل إلى صفحة التواصل
+            </a>
+            <h3 class="h6 mt-4 mb-3">تابعنا</h3>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#" class="link-primary">
+                <i class="bi bi-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="link-primary">
+                <i class="bi bi-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="link-primary">
+                <i class="bi bi-youtube" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Copyright -->
+        <div class="border-top mt-4 pt-3">
+          <p class="small text-body-secondary mb-0">
+            © 2026 ملتقى — دليل فعاليات الجامعة الافتراضية. جميع الحقوق محفوظة.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- Scroll To Top Button -->
+    <button
+      id="scroll-to-top"
+      class="scroll-top-btn"
+      type="button"
+      aria-label="العودة إلى أعلى الصفحة"
+      title="العودة إلى الأعلى"
+    >
+      <i class="bi bi-arrow-up"></i>
+    </button>
+    <!-- Bootstrap CDN Start -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap CDN End -->
+    <script src="./assets/js/slider.js"></script>
+    <script src="./assets/js/theme.js"></script>
+    <script src="./assets/js/scroll.js"></script>
+  </body>
+</html>

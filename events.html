@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="en">
+  <!doctype html>
+  <html lang="ar" dir="rtl">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>مُلتَقى | دليل فعاليات الجامعة الافتراضية</title>
+      <link
+        rel="shortcut icon"
+        href="./assets/imgs/favicon.svg"
+        type="image/svg"
+      />
+
+      <!-- Bootstrap CDN -->
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-CfCrinSRH2IR6a4e6fy2q6ioOX7O6Mtm1L9vRvFZ1trBncWmMePhzvafv7oIcWiW"
+        crossorigin="anonymous"
+      />
+      <!-- Bootstrap Icons CDN -->
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css"
+      />
+      <!-- CSS Link -->
+      <link rel="stylesheet" href="./assets/css/styles.css" />
+    </head>
+    <body>
+      <!-- Start Header -->
+      <header class="p-3">
+        <nav class="navbar navbar-expand-lg navbar-multaqa rounded-4 shadow-sm">
+          <div class="container-fluid">
+            <!-- Brand -->
+            <a
+              class="navbar-brand d-flex align-items-center gap-2"
+              href="index.html"
+            >
+              <span class="brand-symbol">
+                <img src="./assets/imgs/heart-handshake.svg" alt="" />
+              </span>
+              <span>
+                <strong class="d-block">ملتقى</strong>
+                <small class="brand-description d-block">
+                  دليل فعاليات الجامعة الافتراضية
+                </small>
+              </span>
+            </a>
+            <!-- Mobile toggle -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainNavbar"
+              aria-controls="mainNavbar"
+              aria-expanded="false"
+              aria-label="فتح قائمة التنقل"
+            >
+              <span class="multaqa-menu-icon" aria-hidden="true">
+                <span></span>
+                <span></span>
+              </span>
+            </button>
+            <!-- Navigation -->
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="mainNavbar"
+            >
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ms-lg-3 gap-lg-2">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="events.html"
+                    >الفعاليات</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">حول الدليل</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">تواصل معنا</a>
+                </li>
+                <li
+                  class="nav-item d-flex justify-content-center align-items-center"
+                >
+                  <div class="theme-toggle">
+                    <input type="checkbox" id="theme-toggle" />
+                    <label for="theme-toggle" class="theme-switch">
+                      <span class="theme-thumb">
+                        <i class="bi bi-sun-fill sun-icon"></i>
+                        <i class="bi bi-moon-fill moon-icon"></i>
+                      </span>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- End Header -->
+      <!-- Main Section Start -->
+      <main>
+        <!-- Events Section -->
+        <section
+          id="events-page"
+          class="container py-5"
+          aria-labelledby="events-heading"
+        >
+          <!-- Page Header -->
+          <div class="mb-4">
+            <h1 id="events-heading" class="h2 mb-2">جميع الفعاليات</h1>
+            <p class="text-body-secondary mb-0">
+              اكتشف الفعاليات والأنشطة الجامعية وشاركنا اهتماماتك.
+            </p>
+          </div>
+          <!-- Events Filters -->
+          <div class="mb-4">
+            <h2 class="h5 mb-3">تصفية حسب التصنيف</h2>
+            <div
+              class="d-flex flex-wrap gap-2"
+              role="group"
+              aria-label="تصفية الفعاليات حسب التصنيف"
+            >
+              <!-- All Events -->
+              <button
+                type="button"
+                class="btn btn-primary rounded-pill px-3"
+                data-filter="all"
+                aria-pressed="true"
+              >
+                <i class="bi bi-grid" aria-hidden="true"></i>
+                الكل
+              </button>
+              <!-- Tech -->
+              <button
+                type="button"
+                class="btn btn-outline-primary rounded-pill px-3"
+                data-filter="tech"
+                aria-pressed="false"
+              >
+                <i class="bi bi-cpu" aria-hidden="true"></i>
+                تقني
+              </button>
+              <!-- Social -->
+              <button
+                type="button"
+                class="btn btn-outline-primary rounded-pill px-3"
+                data-filter="social"
+                aria-pressed="false"
+              >
+                <i class="bi bi-people" aria-hidden="true"></i>
+                اجتماعي
+              </button>
+              <!-- Culture -->
+              <button
+                type="button"
+                class="btn btn-outline-primary rounded-pill px-3"
+                data-filter="culture"
+                aria-pressed="false"
+              >
+                <i class="bi bi-book" aria-hidden="true"></i>
+                ثقافي
+              </button>
+              <!-- Sport -->
+              <button
+                type="button"
+                class="btn btn-outline-primary rounded-pill px-3"
+                data-filter="sport"
+                aria-pressed="false"
+              >
+                <i class="bi bi-trophy" aria-hidden="true"></i>
+                رياضي
+              </button>
+            </div>
+          </div>
+          <!-- Search Filter -->
+          <div class="row g-3 mb-4">
+            <!-- Search -->
+            <div class="col-12 col-md-4">
+              <label for="event-search" class="form-label"
+                >البحث عن فعالية</label
+              >
+              <div class="input-group shadow-sm">
+                <span class="input-group-text">
+                  <i class="bi bi-search" aria-hidden="true"></i>
+                </span>
+                <input
+                  type="search"
+                  id="event-search"
+                  class="form-control"
+                  placeholder="ابحث باسم الفعالية..."
+                />
+              </div>
+            </div>
+            <!-- Date Sorting -->
+            <div class="col-12 col-md-4">
+              <label for="event-sort" class="form-label">
+                ترتيب حسب التاريخ
+              </label>
+              <select id="event-sort" class="form-select shadow-sm">
+                <option value="asc" selected>الأقرب موعدًا أولًا</option>
+                <option value="desc">الأبعد موعدًا أولًا</option>
+              </select>
+            </div>
+            <!-- Location Filter -->
+            <div class="col-12 col-md-4">
+              <label for="event-location" class="form-label">
+                تصفية حسب الموقع
+              </label>
+              <select id="event-location" class="form-select shadow-sm">
+                <option value="" selected>جميع المواقع</option>
+                <option value="حلب">حلب</option>
+                <option value="اللاذقية">اللاذقية</option>
+                <option value="درعا">درعا</option>
+                <option value="طرطوس">طرطوس</option>
+                <option value="حمص">حمص</option>
+                <option value="حماة">حماة</option>
+              </select>
+            </div>
+          </div>
+          <!-- Events Grid -->
+          <div class="mb-3">
+            <p class="text-body-secondary mb-0">
+              عرض <span id="events-count">8</span> فعاليات
+            </p>
+          </div>
+          <div class="row g-4" id="events-grid">
+            <!-- 1. AI Conference -->
+            <div
+              class="col-12 col-md-6 col-lg-4"
+              data-category="tech"
+              data-location="حلب"
+              data-date="2026-11-15"
+            >
+              <article class="card rounded-4 h-100 overflow-hidden shadow-sm">
+                <div class="ratio ratio-16x9">
+                  <img
+                    src="./assets/imgs/فعالية1/event1-promo.jpg"
+                    alt="مؤتمر الذكاء الاصطناعي والتكنولوجيا"
+                    class="w-100 h-100 object-fit-cover"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <span
+                    class="badge rounded-pill bg-category-tech align-self-start mb-3"
+                  >
+                    تقني
+                  </span>
+                  <div
+                    class="small text-body-secondary d-flex flex-column gap-1 mb-3"
+                  >
+                    <p class="d-flex align-items-center gap-2 mb-0">
+                      <i class="bi bi-calendar-event" aria-hidden="true"></i>
+                      15 نوفمبر 2026
+                    </p>
+                    <p class="d-flex align-items-center gap-2 mb-0">
+                      <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                      كلية الهندسة الكهربائية – جامعة حلب
+                    </p>
+                  </div>
+                  <h3 class="card-title h5 mt-0">
+                    المؤتمر السنوي للذكاء الاصطناعي وتطبيقاته
+                  </h3>
+                  <p class="card-text text-body-secondary lh-base">
+                    استعراض لأبرز مشاريع تخرج الطلاب في مجالات التعلم العميق
+                    وتحليل البيانات الكبيرة بحضور خبراء القطاع.
+                  </p>
+                  <a
+                    href="event.html?id=ai-conference"
+                    class="btn btn-category-tech border-0 mt-auto"
+                  >
+                    تفاصيل الفعالية
+                  </a>
+                </div>
+              </article>
+            </div>
+            <!-- 2. Chess Tournament -->
+            <div
+              class="col-12 col-md-6 col-lg-4"
+              data-category="sport"
+              data-location="حمص"
+              data-date="2026-11-20"
+            >
+              <article class="card rounded-4 h-100 overflow-hidden shadow-sm">
+                <div class="ratio ratio-16x9">
+                  <img
+                    src="./assets/imgs/فعالية5/event5-promo.jpg"
+                    alt="قطع الشطرنج على رقعة اللعب"
+                    class="w-100 h-100 object-fit-cover"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <span
+                    class="badge rounded-pill bg-category-sport align-self-start mb-3"
+                  >
+                    رياضة
+                  </span>
+                  <div
+                    class="small text-body-secondary d-flex flex-column gap-1 mb-3"
+                  >
+                    <p class="d-flex align-items-center gap-2 mb-0">
+                      <i class="bi bi-calendar-event" aria-hidden="true"></i>
+                      20 نوفمبر 2026
+                    </p>
+                    <p class="d-flex align-items-center gap-2 mb-0">
+                      <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                      صالة الشطرنج – نادي عمال حمص الرياضي
+                    </p>
+                  </div>
+                  <h3 class="card-title h5 mt-0">بطولة الشطرنج الجامعية</h3>
+                  <p class="card-text text-body-secondary lh-base">
+                    منافسات قوية بين طلاب الكليات المختلفة في دوري الشطرنج
+                    السنوي لاختيار ممثلي الجامعة.
+                  </p>
+                  <a
+                    href="event.html?id=chess-tournament"
+                    class="btn btn-category-sport border-0 mt-auto"
+                  >
+                    تفاصيل الفعالية
+                  </a>
+                </div>
+              </article>
+            </div>
+            <!-- 3. Web Development Workshop -->
+            <div
+              class="col-12 col-md-6 col-lg-4"
+              data-category="tech"
+              data-location="اللاذقية"
+              data-date="2026-11-22"
+            >
+              <article class="card rounded-4 h-100 overflow-hidden shadow-sm">
+                <div class="ratio ratio-16x9">
+                  <img
+                    src="./assets/imgs/فعالية2/event2-promo.jpg"
+                    alt="ورشة تطوير تطبيقات الويب"
+                    class="w-100 h-100 object-fit-cover"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <span
+                    class="badge rounded-pill bg-category-tech align-self-start mb-3"
+                  >
+                    تقني
+                  </span>
+                  <div
+                    class="small text-body-secondary d-flex flex-column gap-1 mb-3"
+                  >
+                    <p class="d-flex align-items-center gap-2 mb-0">
+                      <i class="bi bi-calendar-event" aria-hidden="true"></i>
+                      22 نوفمبر 2026
+                    </p>
+                    <p class="d-flex align-items-center gap-2 mb-0">
+                      <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                      كلية المعلوماتية – جامعة اللاذقية
+                    </p>
+                  </div>
+                  <h3 class="card-title h5 mt-0">
+                    ورشة عمل أساسيات تطوير تطبيقات الويب
+                  </h3>
+                  <p class="card-text text-body-secondary lh-base">
+                    دورة عملية مكثفة لتعلم أساسيات بناء وتصميم المواقع
+                    الإلكترونية باستخدام HTML5 و CSS3 و JavaScript.
+                  </p>
+                  <a
+                    href="event.html?id=web-workshop"
+                    class="btn btn-category-tech border-0 mt-auto"
+                  >
+                    تفاصيل الفعالية
+                  </a>
+                </div>
+              </article>
+            </div>
+            <!-- 4. Poetry Evening -->
+            <div
+              class="col-12 col-md-6 col-lg-4"
+              data-category="culture"
+              data-location="درعا"
+              data-date="2026-11-25"
+            >
+              <article class="card rounded-4 h-100 overflow-hidden shadow-sm">
+                <div class="ratio ratio-16x9">
+                  <img
+                    src="./assets/imgs/فعالية3/event3-promo.jpg"
+                    alt="أمسية شعرية وتوقيع كتاب"
+                    class="w-100 h-100 object-fit-cover"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <span
+                    class="badge rounded-pill bg-category-culture align-self-start mb-3"
+                  >
+                    ثقافة
+                  </span>
+                  <div
+                    class="small text-body-secondary d-flex flex-column gap-1 mb-3"
+                  >
+                    <p class="d-flex align-items-center gap-2 mb-0">
+                      <i class="bi bi-calendar-event" aria-hidden="true"></i>
+                      25 نوفمبر 2026
+                    </p>
+                    <p class="d-flex align-items-center gap-2 mb-0">
+                      <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                      المركز الثقافي العربي – مدينة درعا
+                    </p>
+                  </div>
+                  <h3 class="card-title h5 mt-0">
+                    أمسية شعرية وتوقيع ديوان «برمجيات الروح»
+                  </h3>
+                  <p class="card-text text-body-secondary lh-base">
+                    لقاء أدبي يجمع المواهب الشعرية من طلاب الجامعة لقراءة أحدث
+                    نصوصهم الأدبية وتوقيع إصداراتهم الأولى.
+                  </p>
+                  <a
+                    href="event.html?id=poetry-evening"
+                    class="btn btn-category-culture border-0 mt-auto"
+                  >
+                    تفاصيل الفعالية
+                  </a>
+                </div>
+              </article>
+            </div>
+            <!-- 5. Basketball Tournament -->
+            <div
+              class="col-12 col-md-6 col-lg-4"
+              data-category="sport"
+              data-location="حلب"
+              data-date="2026-11-28"
+            >
+              <article class="card rounded-4 h-100 overflow-hidden shadow-sm">
+                <div class="ratio ratio-16x9">
+                  <img
+                    src="./assets/imgs/فعالية6/event6-promo.jpg"
+                    alt="كرة سلة تدخل الشبكة"
+                    class="w-100 h-100 object-fit-cover"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <span
+                    class="badge rounded-pill bg-category-sport align-self-start mb-3"
+                  >
+                    رياضة
+                  </span>
+                  <div
+                    class="small text-body-secondary d-flex flex-column gap-1 mb-3"
+                  >
+                    <p class="d-flex align-items-center gap-2 mb-0">
+                      <i class="bi bi-calendar-event" aria-hidden="true"></i>
+                      28 نوفمبر 2026
+                    </p>
+                    <p class="d-flex align-items-center gap-2 mb-0">
+                      <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                      مجمع الحمدانية الرياضي
+                    </p>
+                  </div>
+                  <h3 class="card-title h5 mt-0">
+                    دوري كرة السلة الثلاثي (3x3)
+                  </h3>
+                  <p class="card-text text-body-secondary lh-base">
+                    منافسات حماسية لفرق كرة السلة الثلاثية بين مختلف كليات
+                    الجامعة وسط أجواء تنافسية مشجعة.
+                  </p>
+                  <a
+                    href="event.html?id=basketball-3x3"
+                    class="btn btn-category-sport border-0 mt-auto"
+                  >
+                    تفاصيل الفعالية
+                  </a>
+                </div>
+              </article>
+            </div>
+            <!-- 6. University Book Fair -->
+            <div
+              class="col-12 col-md-6 col-lg-4"
+              data-category="culture"
+              data-location="طرطوس"
+              data-date="2026-12-01"
+            >
+              <article class="card rounded-4 h-100 overflow-hidden shadow-sm">
+                <div class="ratio ratio-16x9">
+                  <img
+                    src="./assets/imgs/فعالية4/event4-promo.jpg"
+                    alt="مجموعة من الكتب في معرض"
+                    class="w-100 h-100 object-fit-cover"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <span
+                    class="badge rounded-pill bg-category-culture align-self-start mb-3"
+                  >
+                    ثقافة
+                  </span>
+                  <div
+                    class="small text-body-secondary d-flex flex-column gap-1 mb-3"
+                  >
+                    <p class="d-flex align-items-center gap-2 mb-0">
+                      <i class="bi bi-calendar-event" aria-hidden="true"></i>
+                      1–5 ديسمبر 2026
+                    </p>
+                    <p class="d-flex align-items-center gap-2 mb-0">
+                      <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                      المركز الثقافي العربي القديم – طرطوس
+                    </p>
+                  </div>
+                  <h3 class="card-title h5 mt-0">معرض الكتاب الجامعي السنوي</h3>
+                  <p class="card-text text-body-secondary lh-base">
+                    معرض شامل يضم مئات العناوين في العلوم والأدب والتكنولوجيا
+                    بتخفيضات خاصة للطلاب.
+                  </p>
+                  <a
+                    href="event.html?id=book-fair"
+                    class="btn btn-category-culture border-0 mt-auto"
+                  >
+                    تفاصيل الفعالية
+                  </a>
+                </div>
+              </article>
+            </div>
+            <!-- 7. Volunteer Day -->
+            <div
+              class="col-12 col-md-6 col-lg-4"
+              data-category="social"
+              data-location="حماة"
+              data-date="2026-12-05"
+            >
+              <article class="card rounded-4 h-100 overflow-hidden shadow-sm">
+                <div class="ratio ratio-16x9">
+                  <img
+                    src="./assets/imgs/فعالية7/event7-promo.jpg"
+                    alt="فريق عمل تطوعي"
+                    class="w-100 h-100 object-fit-cover"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <span
+                    class="badge rounded-pill bg-category-social align-self-start mb-3"
+                  >
+                    اجتماعي
+                  </span>
+                  <div
+                    class="small text-body-secondary d-flex flex-column gap-1 mb-3"
+                  >
+                    <p class="d-flex align-items-center gap-2 mb-0">
+                      <i class="bi bi-calendar-event" aria-hidden="true"></i>
+                      5 ديسمبر 2026
+                    </p>
+                    <p class="d-flex align-items-center gap-2 mb-0">
+                      <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                      حديقة الثورة – مدينة حماة
+                    </p>
+                  </div>
+                  <h3 class="card-title h5 mt-0">
+                    يوم العمل التطوعي الجامعي «نعمل لنرتقي»
+                  </h3>
+                  <p class="card-text text-body-secondary lh-base">
+                    حملة تطوعية طلابية تهدف لخدمة المجتمع المحلي، تشمل تشجير
+                    الحدائق وتنظيم ورش توعوية.
+                  </p>
+                  <a
+                    href="event.html?id=volunteer-day"
+                    class="btn btn-category-social border-0 mt-auto"
+                  >
+                    تفاصيل الفعالية
+                  </a>
+                </div>
+              </article>
+            </div>
+            <!-- 8. New Students Meeting -->
+            <div
+              class="col-12 col-md-6 col-lg-4"
+              data-category="social"
+              data-location="طرطوس"
+              data-date="2026-12-10"
+            >
+              <article class="card rounded-4 h-100 overflow-hidden shadow-sm">
+                <div class="ratio ratio-16x9">
+                  <img
+                    src="./assets/imgs/فعالية8/event8-promo.jpg"
+                    alt="لقاء ترحيبي بالطلاب المستجدين"
+                    class="w-100 h-100 object-fit-cover"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <span
+                    class="badge rounded-pill bg-category-social align-self-start mb-3"
+                  >
+                    اجتماعي
+                  </span>
+                  <div
+                    class="small text-body-secondary d-flex flex-column gap-1 mb-3"
+                  >
+                    <p class="d-flex align-items-center gap-2 mb-0">
+                      <i class="bi bi-calendar-event" aria-hidden="true"></i>
+                      10 ديسمبر 2026
+                    </p>
+                    <p class="d-flex align-items-center gap-2 mb-0">
+                      <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                      المسرح القومي – شارع هنانو، طرطوس
+                    </p>
+                  </div>
+                  <h3 class="card-title h5 mt-0">
+                    اللقاء التعريفي للطلاب المستجدين والأنشطة الطلابية
+                  </h3>
+                  <p class="card-text text-body-secondary lh-base">
+                    لقاء ترحيبي تفاعلي لتعريف الطلاب الجدد بالنوادي الطلابية
+                    والخدمات الجامعية وأنشطة الحياة الجامعية.
+                  </p>
+                  <a
+                    href="event.html?id=new-students"
+                    class="btn btn-category-social border-0 mt-auto"
+                  >
+                    تفاصيل الفعالية
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- Main Section End -->
+      <!-- Start Footer -->
+      <footer class="bg-light border-top mt-5">
+        <div class="container py-4 py-lg-5">
+          <div class="row g-4">
+            <!-- Brand information -->
+            <div class="col-12 col-md-5">
+              <a
+                href="index.html"
+                class="navbar-brand d-inline-flex align-items-center gap-2 mb-3 text-decoration-none"
+              >
+                <span class="brand-symbol">
+                  <img
+                    src="./assets/imgs/heart-handshake.svg"
+                    alt=""
+                    width="26"
+                    height="26"
+                  />
+                </span>
+                <span>
+                  <strong class="d-block text-body">ملتقى</strong>
+                  <small class="d-block text-body-secondary">
+                    دليل فعاليات الجامعة الافتراضية
+                  </small>
+                </span>
+              </a>
+
+              <p class="text-body-secondary mb-0">
+                اكتشف الفعاليات والأنشطة الجامعية، وتعرّف على الفرص التي تهمك في
+                مكان واحد.
+              </p>
+            </div>
+
+            <!-- Quick links -->
+            <div class="col-6 col-md-3">
+              <h2 class="h6 mb-3">روابط سريعة</h2>
+
+              <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+                <li>
+                  <a
+                    href="index.html"
+                    class="link-body-emphasis text-decoration-none"
+                  >
+                    الرئيسية
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="events.html"
+                    class="link-body-emphasis text-decoration-none"
+                  >
+                    جميع الفعاليات
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="about.html"
+                    class="link-body-emphasis text-decoration-none"
+                  >
+                    حول الدليل
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="contact.html"
+                    class="link-body-emphasis text-decoration-none"
+                  >
+                    تواصل معنا
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Contact and social links -->
+            <div class="col-6 col-md-4">
+              <h2 class="h6 mb-3">التواصل</h2>
+              <p class="text-body-secondary">
+                للاستفسارات، تواصل معنا عبر نموذج الاتصال.
+              </p>
+              <a href="contact.html" class="link-primary text-decoration-none">
+                انتقل إلى صفحة التواصل
+              </a>
+              <h3 class="h6 mt-4 mb-3">تابعنا</h3>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="#" class="link-primary">
+                  <i class="bi bi-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="link-primary">
+                  <i class="bi bi-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="link-primary">
+                  <i class="bi bi-youtube" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Copyright -->
+          <div class="border-top mt-4 pt-3">
+            <p class="small text-body-secondary mb-0">
+              © 2026 ملتقى — دليل فعاليات الجامعة الافتراضية. جميع الحقوق
+              محفوظة.
+            </p>
+          </div>
+        </div>
+      </footer>
+      <!-- End Footer -->
+      <!-- Scroll To Top Button -->
+      <button
+        id="scroll-to-top"
+        class="scroll-top-btn"
+        type="button"
+        aria-label="العودة إلى أعلى الصفحة"
+        title="العودة إلى الأعلى"
+      >
+        <i class="bi bi-arrow-up"></i>
+      </button>
+      <!-- Bootstrap CDN Start -->
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"
+      ></script>
+      <!-- Bootstrap CDN End -->
+      <script src="./assets/js/main.js"></script>
+      <script src="./assets/js/theme.js"></script>
+      <script src="./assets/js/scroll.js"></script>
+    </body>
+  </html>
+</html>
