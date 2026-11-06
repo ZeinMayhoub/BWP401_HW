@@ -76,11 +76,12 @@ function toggleAutoSlide(shouldRun) {
   if (shouldRun) {
     clearInterval(interval);
 
-    interval = setInterval(goNext, 5000);
+    interval = setInterval(goNext, 7000);
   } else {
     clearInterval(interval);
   }
 }
+
 
 toggleAutoSlide(true);
 

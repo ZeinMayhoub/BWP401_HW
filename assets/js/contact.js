@@ -57,17 +57,40 @@ document.addEventListener("DOMContentLoaded", () => {
     return errorMessage === "";
   }
 
+  // Live Validation While Typing
+  fields.forEach((field) => {
+    const eventName = field === subject ? "change" : "input";
+
+    field.addEventListener(eventName, () => {
+      validateField(field);
+    });
+  });
+
   // Form Submission
   form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     // Validate All Fields
-    const isValid = fields
-      .map((field) => validateField(field))
-      .every((result) => result);
+    let isValid = true;
+
+    if (validateField(name) === false) {
+      isValid = false;
+    }
+
+    if (validateField(email) === false) {
+      isValid = false;
+    }
+
+    if (validateField(subject) === false) {
+      isValid = false;
+    }
+
+    if (validateField(message) === false) {
+      isValid = false;
+    }
 
     // Stop If Form Is Invalid
-    if (!isValid) {
+    if (isValid === false) {
       return;
     }
 
@@ -81,6 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Reset Form
     form.reset();
 
+    // Remove Validation Styles
     fields.forEach((field) => {
       field.classList.remove("invalid");
 

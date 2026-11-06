@@ -22,17 +22,17 @@
   --bs-secondary: var(--secondary);
   --bs-secondary-rgb: 242, 184, 128;
 
-/* Category backgrounds */
---category-tech: #EAF0F8;
---category-culture: #FCE8D5;
---category-sports: #E2F0E7;
---category-social: #EEE8F7;
+  /* Category backgrounds */
+  --category-tech: #eaf0f8;
+  --category-culture: #fce8d5;
+  --category-sports: #e2f0e7;
+  --category-social: #eee8f7;
 
-/* Category accent colors */
---category-tech-accent: #4F6F9B;
---category-culture-accent: #A45D36;
---category-sports-accent: #477A59;
---category-social-accent: #715A91;
+  /* Category accent colors */
+  --category-tech-accent: #4f6f9b;
+  --category-culture-accent: #a45d36;
+  --category-sports-accent: #477a59;
+  --category-social-accent: #715a91;
 }
 
 .text-soft {
@@ -228,6 +228,14 @@ body {
 /* Responsive Navbar Start */
 @media (max-width: 992px) {
   .navbar-multaqa .navbar-collapse {
+    margin-top: 0;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+  }
+
+  /* Mobile Navigation Menu */
+  .navbar-multaqa .navbar-collapse .navbar-nav {
     margin-top: 0.75rem;
     padding: 0.75rem;
     background-color: var(--bg);
@@ -254,6 +262,53 @@ body {
     display: block;
     width: auto;
     margin: 0.75rem auto 0 !important;
+  }
+}
+
+/* Mobile Navbar Layout */
+@media (max-width: 575.98px) {
+  /* Keep Logo and Toggle in One Row */
+  .navbar-multaqa > .container-fluid {
+    flex-wrap: wrap;
+  }
+
+  /* Keep menu below logo and toggle */
+  .navbar-multaqa .navbar-collapse {
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  /* Logo */
+  .navbar-multaqa .navbar-brand {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin-inline-end: 8px;
+    gap: 8px !important;
+  }
+
+  /* Logo Icon */
+  .navbar-multaqa .brand-symbol {
+    padding: 8px;
+    flex-shrink: 0;
+  }
+
+  .navbar-multaqa .brand-symbol img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+
+  /* Brand Text */
+  .navbar-multaqa .brand-description {
+    font-size: 0.65rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Navbar Toggle Button */
+  .navbar-multaqa .navbar-toggler {
+    flex: 0 0 44px;
   }
 }
 /* Responsive Navbar End */
@@ -294,7 +349,7 @@ body {
 }
 
 .btn:hover {
-  filter: brightness(0.9)
+  filter: brightness(0.9);
 }
 
 /* Tech button */
@@ -345,6 +400,31 @@ article img:hover {
   cursor: zoom-in;
 }
 /* All Events Section End */
+
+/* Contact Section Start */
+
+/* Contact Form Validation */
+
+.contact-error {
+  display: none;
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 5px;
+}
+
+.contact-error.show {
+  display: block;
+}
+
+.contact-field.invalid {
+  border: 1px solid #dc3545 !important;
+}
+
+.contact-field.invalid:focus {
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.2);
+}
+/* Contact Section End */
 
 /* Dark Theme Colors */
 [data-theme="dark"] {
@@ -520,4 +600,55 @@ article img:hover {
 /* Dark Mode */
 [data-theme="dark"] .scroll-top-btn {
   background-color: #4f6f9b;
+}
+
+/* Image Viewer */
+.image-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  background: rgba(10, 18, 30, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity 0.25s ease;
+}
+
+.image-viewer.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.image-viewer img {
+  max-width: 92vw;
+  max-height: 88vh;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.image-viewer-close {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+
+  background: transparent;
+  border: none;
+
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+body.image-viewer-open {
+  overflow: hidden;
 }

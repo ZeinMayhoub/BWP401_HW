@@ -307,29 +307,23 @@ if (!currentEvent) {
               class="w-100 h-100 object-fit-cover"
             >
           </div>
-
           <div class="card-body p-4">
             <span class="badge rounded-pill ${currentEvent.categoryClass} mb-3">
               ${currentEvent.category}
             </span>
-
             <h1 id="event-heading" class="h2 mb-3">
               ${currentEvent.title}
             </h1>
-
             <p class="text-body-secondary lh-lg mb-4">
               ${currentEvent.shortDescription}
             </p>
-
             <hr class="my-4">
-
             <h2 class="h5 mb-3">عن الفعالية</h2>
             <p class="text-body-secondary lh-lg mb-0">
               ${currentEvent.description}
             </p>
           </div>
         </article>
-
         <!-- Event Image Gallery -->
         <section class="mt-4" aria-labelledby="gallery-heading">
           <h2 id="gallery-heading" class="h5 mb-3">معرض الصور</h2>
@@ -337,7 +331,6 @@ if (!currentEvent) {
             ${galleryHTML}
           </div>
         </section>
-
         <!-- Static Location Map -->
         <section class="mt-4" aria-labelledby="map-heading">
           <h2 id="map-heading" class="h5 mb-3">موقع الفعالية على الخريطة</h2>
@@ -350,13 +343,11 @@ if (!currentEvent) {
           </div>
         </section>
       </div>
-
       <!-- Event Details Sidebar -->
       <aside class="col-12 col-lg-4">
         <div class="card rounded-4 shadow-sm">
           <div class="card-body p-4">
             <h2 class="h5 mb-4">موعد ومكان الفعالية</h2>
-
             <div class="d-flex gap-3 mb-4">
               <i class="bi bi-calendar-event fs-5 text-primary" aria-hidden="true"></i>
               <div>
@@ -364,7 +355,6 @@ if (!currentEvent) {
                 <p class="text-body-secondary small mb-0">${currentEvent.date}</p>
               </div>
             </div>
-
             <div class="d-flex gap-3 mb-4">
               <i class="bi bi-clock fs-5 text-primary" aria-hidden="true"></i>
               <div>
@@ -372,7 +362,6 @@ if (!currentEvent) {
                 <p class="text-body-secondary small mb-0">${currentEvent.time}</p>
               </div>
             </div>
-
             <div class="d-flex gap-3 mb-4">
               <i class="bi bi-geo-alt fs-5 text-primary" aria-hidden="true"></i>
               <div>
@@ -380,9 +369,7 @@ if (!currentEvent) {
                 <p class="text-body-secondary small mb-0">${currentEvent.location}</p>
               </div>
             </div>
-
             <hr class="my-4">
-
             <div class="d-grid gap-2 mb-3">
               <button
                 type="button"
@@ -392,7 +379,6 @@ if (!currentEvent) {
                 <i class="bi bi-calendar-plus" aria-hidden="true"></i>
                 أضف للتقويم
               </button>
-
               <button
                 type="button"
                 class="btn btn-outline-primary w-100 share-event-btn"
@@ -402,7 +388,6 @@ if (!currentEvent) {
                 شارك
               </button>
             </div>
-
             <a href="events.html" class="btn btn-outline-primary w-100">
               <i class="bi bi-arrow-right me-1" aria-hidden="true"></i>
               العودة إلى جميع الفعاليات
